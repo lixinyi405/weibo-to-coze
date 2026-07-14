@@ -1,0 +1,79 @@
+name: Weibo To Coze Sync
+
+
+on:
+
+  # 每天运行4次
+  schedule:
+
+    - cron: "0 0 * * *"
+
+    - cron: "0 6 * * *"
+
+    - cron: "0 12 * * *"
+
+    - cron: "0 18 * * *"
+
+
+  # 支持手动运行
+
+  workflow_dispatch:
+
+
+
+jobs:
+
+
+  sync:
+
+
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+
+
+      - name: Checkout
+
+        uses: actions/checkout@v4
+
+
+
+      - name: Setup Python
+
+        uses: actions/setup-python@v5
+
+        with:
+
+          python-version: "3.11"
+
+
+
+      - name: Install dependencies
+
+        run:
+
+          pip install -r requirements.txt
+
+
+
+      - name: Run sync
+
+        env:
+
+          WEIBO_UID:
+            ${{ secrets.WEIBO_UID }}
+
+
+          COZE_TOKEN:
+            ${{ secrets.COZE_TOKEN }}
+
+
+          COZE_DATASET_ID:
+            ${{ secrets.COZE_DATASET_ID }}
+
+
+        run:
+
+          python main.py
