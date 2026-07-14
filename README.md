@@ -85,7 +85,7 @@ Coze知识库
 
 ↓
 
-# 一、本地运行
+## 一、本地运行
 
 
 ## 1. 安装环境
@@ -117,7 +117,7 @@ COZE_TOKEN=Coze Token
 COZE_DATASET_ID=知识库ID
 3. 运行
 python main.py
-二、GitHub Actions部署
+##二、GitHub Actions部署
 1. 创建仓库
 
 创建：
@@ -167,7 +167,7 @@ Run workflow
 
 即可测试。
 
-三、自动运行时间
+##三、自动运行时间
 
 GitHub Actions默认：
 
@@ -192,7 +192,7 @@ UTC时间
 20:00
 
 02:00
-四、Coze知识库配置
+##四、Coze知识库配置
 
 需要准备：
 
@@ -207,7 +207,7 @@ COZE_TOKEN
 
 COZE_DATASET_ID
 
-五、数据格式
+##五、数据格式
 
 微博会转换成：
 
@@ -236,7 +236,7 @@ COZE_DATASET_ID
 
 这种格式更适合 RAG 检索。
 
-六、后续扩展方向
+##六、后续扩展方向
 
 可以继续增加：
 
@@ -247,7 +247,7 @@ B站视频同步
 AI每日追星日报
 多明星知识库
 自动生成粉丝周报
-七、项目定位
+##七、项目定位
 
 该项目本质为：
 
