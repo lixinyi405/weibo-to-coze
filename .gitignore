@@ -1,5 +1,20 @@
+# Python
+
 __pycache__/
+
 *.pyc
+
+
+# 环境变量
+
 .env
-cache/
-output/
+
+
+# 日志
+
+logs/
+
+
+# 本地同步记录
+
+data/history.json
